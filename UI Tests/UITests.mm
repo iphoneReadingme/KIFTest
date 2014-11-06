@@ -2,10 +2,56 @@
 //  UITests.m
 //  solanum
 //
+//  Created by yangfs on 14-11-5.
+//  Copyright (c) 2014年 Razeware. All rights reserved.
+//
+
+
+#ifdef Test_Enable
+#import "NBAccessibilityNames.h"
+#import "UITests.h"
+
+@implementation UITests
+
+/*
+ beforeAll 是一个实际上只是在所有测试运行之前被调用一次的特殊方法. 你可以为你这里运行的测试设置任何实体变量和初始化条件.
+ tester 对象是指定的KIFUITestActor 类的一个缩略名称. 这个类包含了可以模拟用户动作的方法，包括触及还有在视图上滑动.
+ tapViewWithAccessibilityLabel: 也许是最常被用到的测试动作方法. 正如其名称所揭示的，它使用在给定的可访问标签上模拟在视图上的触击. 在大多数情况下，可访问标签都是匹配诸如按钮这种组件的可视的文本标签. 如果不是这样的，那就会如你在下一节将会看到了，你将需要手动设置访问标签.
+ 一些控件，诸如 UISwitch, 相较而言更加复杂而比仅仅只需要简单的触击更甚的动作. KIF 提供了一个特殊的 setOn:forSwitchWithAccessibilityLabel: 方法来改变一个切换的状态.
+ 总结起来：这个方法对测试动作进行了四步操作:
+ 1. 触击“Settings” 选项卡按钮条.
+ 2. 将 “调试模式Debug Mode” 切换到它的“开启”状态.
+ 3. 触击 “Clear History” 按钮.
+ 4. 在UIAlertView上触击“Clear”按钮.
+ 
+ 
+ */
+
+- (void)beforeAll
+{
+	[tester tapViewWithAccessibilityLabel:NBAccessibilityLabel_Setting_Button];
+	[tester setOn:YES forSwitchWithAccessibilityLabel:NBAccessibilityLabel_Debug_Mode_Switch];
+	[tester tapViewWithAccessibilityLabel:NBAccessibilityLabel_Clear_History_Button];
+	[tester tapViewWithAccessibilityLabel:NBAccessibilityLabel_AlertView_Clear_Button];
+	[tester tapViewWithAccessibilityLabel:NBAccessibilityLabel_Timer_Button];
+}
+
+@end
+
+#endif
+
+
+//
+//  UITests.m
+//  solanum
+//
 //  Created by Matt Galloway on 01/02/2014.
 //  Copyright (c) 2014 Razeware. All rights reserved.
 //
 
+#import <XCTest/XCTest.h>
+#import <SenTestingKit/SenTestCase_Macros.h>
+#import <SenTestingKit/SenTestCase.h>
 #import "UITests.h"
 
 @implementation UITests
@@ -56,7 +102,7 @@
     
     // 4
     UISlider *slider = (UISlider *)[tester waitForViewWithAccessibilityLabel:@"Work Time Slider"];
-    STAssertEqualsWithAccuracy([slider value], 15.0f, 0.1, @"Work time slider was not set!");
+    STAssertEqualsWithAccuracy((CGFloat)[slider value], 15.0f, 0.1f, @"Work time slider was not set!");
 }
 
 - (void)test20StartTimerAndWaitForFinish {

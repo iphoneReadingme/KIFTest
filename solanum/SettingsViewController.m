@@ -6,6 +6,7 @@
 //  Copyright (c) 2013 Razeware. All rights reserved.
 //
 
+#import "NBAccessibilityNames.h"
 #import "SettingsViewController.h"
 
 NSString * const kSettingsDebugModeKey = @"debugMode";
@@ -14,6 +15,7 @@ NSString * const kSettingsHistoryKey = @"history";
 @interface SettingsViewController () <UIAlertViewDelegate>
 
 @property (nonatomic, weak) IBOutlet UISwitch *debugModeSwitch;
+@property (nonatomic, weak) IBOutlet UIButton *clearButton;
 
 @end
 
@@ -24,6 +26,8 @@ NSString * const kSettingsHistoryKey = @"history";
   [super viewDidLoad];
 
   [self.debugModeSwitch setOn:[[NSUserDefaults standardUserDefaults] boolForKey:kSettingsDebugModeKey]];
+	self.debugModeSwitch.accessibilityLabel = NBAccessibilityLabel_Debug_Mode_Switch;
+	self.clearButton.accessibilityLabel = NBAccessibilityLabel_Clear_History_Button;
 }
 
 - (IBAction)toggleDebugModeSwitch:(UISwitch *)sender
@@ -34,7 +38,9 @@ NSString * const kSettingsHistoryKey = @"history";
 
 - (IBAction)clearHistoryTapped:(id)sender
 {
-  [[[UIAlertView alloc] initWithTitle:@"Clear History?" message:@"Clear all work and task history?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Clear", nil] show];
+	UIAlertView* testAlertView = (UIAlertView*)[[UIAlertView alloc] initWithTitle:@"Clear History?" message:@"Clear all work and task history?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:NBAccessibilityLabel_AlertView_Clear_Button, nil];
+	NSLog(@"%@", testAlertView.accessibilityLabel);
+	[testAlertView show];
 }
 
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex

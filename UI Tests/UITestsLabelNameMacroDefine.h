@@ -6,8 +6,7 @@
 //  Copyright (c) 2014年 Razeware. All rights reserved.
 //
 
-#import <KIF/KIF.h>
 
-@interface UITests : KIFTestCase
 
-@end
+
+

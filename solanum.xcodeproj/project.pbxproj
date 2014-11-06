@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5BF144661A0A1F860083450B /* UITests.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5BF144651A0A1F860083450B /* UITests.mm */; };
 		78704691186703BC00401921 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78704690186703BC00401921 /* SenTestingKit.framework */; };
 		78704692186703BC00401921 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB87F91858F0CC00BF5054 /* Foundation.framework */; };
 		78704693186703BC00401921 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78DB87FD1858F0CC00BF5054 /* UIKit.framework */; };
@@ -36,10 +37,30 @@
 		78E4CED4185962BA000ED8FC /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4CED3185962BA000ED8FC /* SettingsViewController.m */; };
 		78E4CED718597235000ED8FC /* TimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4CED618597235000ED8FC /* TimerViewController.m */; };
 		78E4CEDA185B93DC000ED8FC /* PresetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 78E4CED9185B93DC000ED8FC /* PresetsViewController.m */; };
-		C9E48E2B189DB230004302E7 /* UITests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9E48E2A189DB230004302E7 /* UITests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5BF1445E1A0A1E900083450B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF144571A0A1E900083450B /* KIF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB72047C1680DDAD00278DA2;
+			remoteInfo = KIF;
+		};
+		5BF144601A0A1E900083450B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF144571A0A1E900083450B /* KIF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB60ECC1177F8C83005A041A;
+			remoteInfo = "Test Host";
+		};
+		5BF144621A0A1E900083450B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5BF144571A0A1E900083450B /* KIF.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB60ECEB177F8DB3005A041A;
+			remoteInfo = "KIF Tests";
+		};
 		7870469D186703BC00401921 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 78DB87EE1858F0CC00BF5054 /* Project object */;
@@ -50,6 +71,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5BF144571A0A1E900083450B /* KIF.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = KIF.xcodeproj; path = "KIF-2.0.0/KIF.xcodeproj"; sourceTree = "<group>"; };
+		5BF144641A0A1F860083450B /* UITests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITests.h; sourceTree = "<group>"; };
+		5BF144651A0A1F860083450B /* UITests.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = UITests.mm; sourceTree = "<group>"; };
+		5BF144681A0A22860083450B /* UITestsLabelNameMacroDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITestsLabelNameMacroDefine.h; sourceTree = "<group>"; };
+		5BF144BC1A0A235B0083450B /* NBAccessibilityNames.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NBAccessibilityNames.h; sourceTree = "<group>"; };
 		7870468F186703BC00401921 /* UI Tests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "UI Tests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78704690186703BC00401921 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		78704696186703BC00401921 /* UI Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "UI Tests-Info.plist"; sourceTree = "<group>"; };
@@ -91,8 +117,6 @@
 		78E4CED618597235000ED8FC /* TimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimerViewController.m; sourceTree = "<group>"; };
 		78E4CED8185B93DC000ED8FC /* PresetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PresetsViewController.h; sourceTree = "<group>"; };
 		78E4CED9185B93DC000ED8FC /* PresetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PresetsViewController.m; sourceTree = "<group>"; };
-		C9E48E29189DB230004302E7 /* UITests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UITests.h; sourceTree = "<group>"; };
-		C9E48E2A189DB230004302E7 /* UITests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UITests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,12 +146,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5BF144581A0A1E900083450B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5BF1445F1A0A1E900083450B /* libKIF.a */,
+				5BF144611A0A1E900083450B /* Test Host.app */,
+				5BF144631A0A1E900083450B /* KIF Tests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		78704694186703BC00401921 /* UI Tests */ = {
 			isa = PBXGroup;
 			children = (
+				5BF144BC1A0A235B0083450B /* NBAccessibilityNames.h */,
+				5BF144681A0A22860083450B /* UITestsLabelNameMacroDefine.h */,
 				78704695186703BC00401921 /* Supporting Files */,
-				C9E48E29189DB230004302E7 /* UITests.h */,
-				C9E48E2A189DB230004302E7 /* UITests.m */,
+				5BF144641A0A1F860083450B /* UITests.h */,
+				5BF144651A0A1F860083450B /* UITests.mm */,
 			);
 			path = "UI Tests";
 			sourceTree = "<group>";
@@ -159,6 +195,7 @@
 		78DB87ED1858F0CC00BF5054 = {
 			isa = PBXGroup;
 			children = (
+				5BF144571A0A1E900083450B /* KIF.xcodeproj */,
 				78DB87FF1858F0CC00BF5054 /* solanum */,
 				78704694186703BC00401921 /* UI Tests */,
 				78DB87F81858F0CC00BF5054 /* Frameworks */,
@@ -290,6 +327,12 @@
 			mainGroup = 78DB87ED1858F0CC00BF5054;
 			productRefGroup = 78DB87F71858F0CC00BF5054 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 5BF144581A0A1E900083450B /* Products */;
+					ProjectRef = 5BF144571A0A1E900083450B /* KIF.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				78DB87F51858F0CC00BF5054 /* solanum */,
@@ -297,6 +340,30 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		5BF1445F1A0A1E900083450B /* libKIF.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libKIF.a;
+			remoteRef = 5BF1445E1A0A1E900083450B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5BF144611A0A1E900083450B /* Test Host.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = "Test Host.app";
+			remoteRef = 5BF144601A0A1E900083450B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		5BF144631A0A1E900083450B /* KIF Tests.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "KIF Tests.octest";
+			remoteRef = 5BF144621A0A1E900083450B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		7870468D186703BC00401921 /* Resources */ = {
@@ -332,7 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9E48E2B189DB230004302E7 /* UITests.m in Sources */,
+				5BF144661A0A1F860083450B /* UITests.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
