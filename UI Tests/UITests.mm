@@ -103,6 +103,7 @@
     // 4
     UISlider *slider = (UISlider *)[tester waitForViewWithAccessibilityLabel:@"Work Time Slider"];
     STAssertEqualsWithAccuracy((CGFloat)[slider value], 15.0f, 0.1f, @"Work time slider was not set!");
+	slider = nil;
 }
 
 - (void)test20StartTimerAndWaitForFinish {
@@ -182,6 +183,7 @@
     UITableView *tableView = (UITableView *)[tester waitForViewWithAccessibilityLabel:@"History List"];
     NSInteger originalHistoryCount = [tableView numberOfRowsInSection:0];
     STAssertTrue(originalHistoryCount > 0, @"There should be at least 1 history item!");
+	originalHistoryCount = 0;
     
     // 3
     [tester swipeViewWithAccessibilityLabel:@"Section 0 Row 0" inDirection:KIFSwipeDirectionLeft];
@@ -192,6 +194,7 @@
     NSInteger currentHistoryCount = [tableView numberOfRowsInSection:0];
     STAssertTrue(currentHistoryCount == originalHistoryCount - 1,
                  @"The history item was not deleted :[");
+	currentHistoryCount = 0;
 }
 
 @end
